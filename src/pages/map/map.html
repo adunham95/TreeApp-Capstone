@@ -15,7 +15,7 @@
 
 <ion-content>
   <sebm-google-map [latitude]="lat" [longitude]="lng" [zoom]=16>
-    <sebm-google-map-marker  *ngFor="let tree of forest;" [latitude]="tree.Lat" [longitude]="tree.Long">
+    <sebm-google-map-marker  *ngFor="let tree of forest; let i = index" [latitude]="tree.Lat" [longitude]="tree.Long" (click)="openModal(i)">
       <!--<sebm-google-map-info-window [disableAutoPan]="true">-->
         <!--<ion-avatar item-left>-->
           <!--<img style="height: 150px; width: 150px" src="assets/img/rgjddtoLQMXBIWMALxAh_8aff73d4a76acfa50339ba418bd12afa.jpg">-->

@@ -6,7 +6,8 @@ import { GoogleMap, GoogleMapsEvent, GoogleMapsLatLng, CameraPosition, GoogleMap
 declare var google;
 
 @Component({
-    templateUrl: 'tree-modal.html'
+    templateUrl: 'tree-modal.html',
+  styles: ['.sebm-google-map-container {height: 200px;}']
 })
 export class TreeModal {
     tree;

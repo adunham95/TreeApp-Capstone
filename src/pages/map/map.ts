@@ -1,8 +1,7 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
-import { NavController,AlertController, Platform } from 'ionic-angular';
+import {NavController, Platform, ModalController} from 'ionic-angular';
 import {Http} from "@angular/http";
-import { SebmGoogleMap, SebmGoogleMapMarker, SebmGoogleMapInfoWindow } from
-  'angular2-google-maps/core';
+import {TreeModal} from '../../components/'
 
 declare var google;
 
@@ -19,19 +18,16 @@ export class Map {
   @ViewChild('map') mapElement: ElementRef;
       map: any;
 
-  constructor(public navCtrl: NavController, public platform: Platform, private http:Http,) {
+  constructor(public navCtrl: NavController, public platform: Platform, private http:Http,public modalCtrl: ModalController) {
     http.get('http://adriandunham.com/treesFULL.json')
       .subscribe(res => this.forest = res.json());
   }
 
+  openModal(characterNum) {
 
-  // showAlert(latitude, longitude) {
-  //   let alert = this.alertCtrl.create({
-  //     title: 'Location!',
-  //     subTitle: 'Latitude: ' + latitude + 'Longitude: ' + longitude,
-  //     buttons: ['OK']
-  //   });
-  //   alert.present();
-  // }
+    let modal = this.modalCtrl.create(TreeModal, {tree: this.forest[characterNum]});
+    // console.log(characterNum);
+    modal.present();
+  }
 
 }
