@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Trees</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <!--<ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>-->
+
+  <ion-list>
+
+    <!--<tree-item ></tree-item>-->
+
+      <ion-item *ngFor="let tree of forest; let i = index " (click)="openModal(i)">
+          <ion-avatar item-left>
+              <img src="assets/img/rgjddtoLQMXBIWMALxAh_8aff73d4a76acfa50339ba418bd12afa.jpg">
+          </ion-avatar>
+          <h2>{{tree.Species_common}}</h2>
+          <p>{{tree.Species_scientific}}</p>
+      </ion-item>
+
+  </ion-list>
+
+</ion-content>

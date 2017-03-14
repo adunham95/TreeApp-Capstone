@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Map</ion-title>
+
+    <!--<ion-buttons end>-->
+      <!--<button ion-button (click)="addMarker()"><ion-icon name="add"></ion-icon>Add Marker</button>-->
+    <!--</ion-buttons>-->
+
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <sebm-google-map [latitude]="lat" [longitude]="lng" [zoom]=16>
+    <sebm-google-map-marker  *ngFor="let tree of forest;" [latitude]="tree.Lat" [longitude]="tree.Long">
+      <!--<sebm-google-map-info-window [disableAutoPan]="true">-->
+        <!--<ion-avatar item-left>-->
+          <!--<img style="height: 150px; width: 150px" src="assets/img/rgjddtoLQMXBIWMALxAh_8aff73d4a76acfa50339ba418bd12afa.jpg">-->
+        <!--</ion-avatar>-->
+        <!--<h6>{{tree.Species_common}}</h6>-->
+        <!--<p>{{tree.Species_scientific}}</p>-->
+      <!--</sebm-google-map-info-window>-->
+    </sebm-google-map-marker>
+  </sebm-google-map>
+
+  <!--<ion-fab right bottom>-->
+    <!--<button ion-fab color="light"><ion-icon name="arrow-dropleft"></ion-icon></button>-->
+    <!--<ion-fab-list side="top">-->
+      <!--<button ion-fab><ion-icon name="logo-facebook"></ion-icon></button>-->
+      <!--<button ion-fab><ion-icon name="logo-twitter"></ion-icon></button>-->
+      <!--<button ion-fab><ion-icon name="logo-vimeo"></ion-icon></button>-->
+      <!--<button ion-fab><ion-icon name="logo-googleplus"></ion-icon></button>-->
+    <!--</ion-fab-list>-->
+  <!--</ion-fab>-->
+</ion-content>

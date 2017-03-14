@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>404 File Not Found</title>
+		<style type="text/css">
+			body
+			{
+				padding: 50px;
+				text-align: center;
+				font: normal 12pt Verdana, sans-serif;
+			}
+			h1
+			{
+				font: bold 18pt "Georgia", serif;
+				border-bottom: 1px solid #eee;
+				padding: 10px 0;
+			}
+			p
+			{
+				color: #999;
+			}
+			.errorCode
+			{
+				color: #992222;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>
+			<span class="errorCode">404</span>: The page cannot be found
+		</h1>
+		<p>The page you are looking for might have been removed, had its
+		name changed, or is temporarily unavailable.</p>
+	</body>
+</html>

@@ -1,0 +1,76 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+            About {{tree.Species_common}}
+        </ion-title>
+        <ion-buttons start>
+            <button ion-button clear color="primary" (click)="dismiss()">
+                Close
+            </button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!--<div #map id="map" style="height:50%;"></div>-->
+  <ion-grid padding>
+    <ion-row>
+      <ion-col width-25>
+        <img src="assets/img/rgjddtoLQMXBIWMALxAh_8aff73d4a76acfa50339ba418bd12afa.jpg">
+      </ion-col>
+      <ion-col>
+        <h3>{{tree.Species_common}}</h3>
+        <h5><i>{{tree.Species_scientific}}</i></h5>
+        <h6>{{tree.Spp_code}}</h6>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-list>
+
+    <!--<tree-item ></tree-item>-->
+
+    <ion-card *ngFor="let treeList of tree.Trees; let i = index ">
+
+      <ion-item>
+        <ion-avatar item-left>
+          <img src="assets/img/rgjddtoLQMXBIWMALxAh_8aff73d4a76acfa50339ba418bd12afa.jpg">
+        </ion-avatar>
+        <h2>{{treeList.Tree_ID}}</h2>
+        <p>
+          {{treeList.Lat}}
+          {{treeList.Long}}
+        </p>
+      </ion-item>
+
+      <button ion-button full style="float: right" (click)="showMore(i, treeList.Lat, treeList.Long)">Button</button>
+
+      <!--<ion-card-content *ngIf="about == i">-->
+        <!--<p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>-->
+        <!--&lt;!&ndash;<map-component [tree]="treeList.Tree_ID"></map-component>&ndash;&gt;-->
+      <!--</ion-card-content>-->
+
+    </ion-card>
+
+    <!--<ion-item *ngFor="let treeList of tree.Trees; let i = index ">-->
+      <!--<ion-avatar item-left>-->
+        <!--<img src="../../assets/img/rgjddtoLQMXBIWMALxAh_8aff73d4a76acfa50339ba418bd12afa.jpg">-->
+      <!--</ion-avatar>-->
+      <!--<h2>{{treeList.Tree_ID}}</h2>-->
+      <!--<p>-->
+        <!--{{treeList.Lat}}-->
+        <!--{{treeList.Long}}-->
+      <!--</p>-->
+      <!--<button ion-button style="float: right">Button</button>-->
+
+    <!--</ion-item>-->
+
+  </ion-list>
+</ion-content>

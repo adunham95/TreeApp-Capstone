@@ -1,0 +1,53 @@
+<ion-content>
+  <ion-slides pager>
+
+
+    <ion-slide style="background-color: lightgrey" padding id="bg">
+
+      <ion-header>
+        <ion-navbar>
+          <button ion-button clear (click)="goHome()"  style="float: left">
+            Skip
+          </button>
+
+          <!--<button ion-button>{{firstRun}}</button>-->
+
+          <button ion-button clear (click)="goToSlide()" style="float: right">
+            Next
+          </button>
+
+        </ion-navbar>
+      </ion-header>
+
+      <ion-chip #chip2>
+        <ion-icon name="pin" color="primary"></ion-icon>
+      </ion-chip>
+
+      <h2>Welcome</h2>
+      <img src="assets/img/tree-03.jpg">
+      <p>The TreeApp allows you to discover various types of trees throughout the Western Carolina University campus</p>
+    </ion-slide>
+
+    <ion-slide style="background-color: lightgray">
+
+      <ion-header>
+        <ion-navbar>
+          <button ion-button clear (click)="goHome()"  style="float: left">
+            Skip
+          </button>
+
+          <button ion-button clear (click)="goToSlide()" style="float: right">
+            Next
+          </button>
+
+        </ion-navbar>
+      </ion-header>
+
+      <button ion-button (click)="goHome()">
+        Go To Home
+      </button>
+    </ion-slide>
+
+
+  </ion-slides>
+</ion-content>
