@@ -14,10 +14,19 @@ Then you should be good to go
 
 ### Testing
 To view in the browser run ionic serve, and you will get a live local serve to devlop on. 
+To test the app on an Android Device you need to enable develop mode, and USB debugging on the Android Device. 
 
 ### Building 
-To Build an apk for android Devices
+**Android Devices**
+To run the app on an Android device (either in production, or testing) you need to run _ionic platform add android_
 If you have not created a keystore you will need to do that. 
+To create a keystore
+_link to keytool_ -genkey -v -keystore _keystoreName_.keystore -alias _keystoreAlias_ -keyalg RSA -keysize 2048 -validity 10000
+
+You will be asked to create a password for your keystore.
+**Do not forget this password. You will need it to build the app. **
+**Do not loose this keystore. Store it somewhere safe on your computer. This is how the Play Store recognises your** **app. Without this key, you cannot update your app. If you loose this, there is no way to retrieve this.**
+
 _link to jasrsigner_ -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore _customKeystore_ _link to unsigned apk_ _appname_
 
 ### JSON Stucture
@@ -47,9 +56,7 @@ The best format for these images is PNG
 Full width that should have a css-width of 100% should be no less than 640px to keep the same resoultion. 
 
 ### Issues/Pain Points
-When creating and icon for the the app create it as a 512px X 512px PNG and place it in the resources folder with the name icon.png. Run > ionic resources --icon > and it will generate the needed icons for both OS's. 
-
-
-### Additional Issues 
+When creating and icon for the the app create it as a 512px X 512px PNG and place it in the resources folder with the name icon.png. Run _ionic resources --icon_ and it will generate the needed icons for both OS's. 
+When updating the app on the Play Store make sure you are updating the config.xml to a higher version number, or Google will not accept the APK. 
 
 Made Using http://prose.io
