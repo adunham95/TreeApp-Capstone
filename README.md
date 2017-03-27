@@ -24,6 +24,7 @@ To create a keystore
 _link to keytool_ -genkey -v -keystore _keystoreName_.keystore -alias _keystoreAlias_ -keyalg RSA -keysize 2048 -validity 10000
 
 You will be asked to create a password for your keystore.
+
 **Do not forget this password. You will need it to build the app. **
 **Do not loose this keystore. Store it somewhere safe on your computer. This is how the Play Store recognises your** **app. Without this key, you cannot update your app. If you loose this, there is no way to retrieve this.**
 
