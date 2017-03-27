@@ -33,7 +33,9 @@ You will be asked to create a password for your keystore.
 
 **Do not loose this keystore. Store it somewhere safe on your computer. This is how the Play Store recognises your app. Without this key, you cannot update your app. If you loose this, there is no way to retrieve this.**
 
-_link to jasrsigner_ -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore _customKeystore_ _link to unsigned apk_ _appname_
+_link to jasrsigner_ -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore _customKeystoreName_  _link to unsigned apk_  _appname_
+
+_zipalign_ -v 4 _Link-to-unsigned.apk_ _Signed-APK-Name.apk_
 
 ### JSON Stucture
 Example: { "Tree_ID":1, "UTM_zone":"17S", "Easting":301313.12, "Northing":3909461.17, "Species_scientific":"Quercus alba", "Species_common":"White oak", "Spp_code":"QUAL", "Lat": 35.308635, "Long": -83.185412}
@@ -64,5 +66,6 @@ Full width that should have a css-width of 100% should be no less than 640px to 
 ### Issues/Pain Points
 When creating and icon for the the app create it as a 512px X 512px PNG and place it in the resources folder with the name icon.png. Run _ionic resources --icon_ and it will generate the needed icons for both OS's. 
 When updating the app on the Play Store make sure you are updating the config.xml to a higher version number, or Google will not accept the APK. 
+The Jarsigner.exe and the keytool.exe are in the JDK. 
 
 Made Using http://prose.io
