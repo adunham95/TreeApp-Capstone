@@ -3,6 +3,7 @@
 - Set up
 - Testing
 - Building
+- Publishing Apps on the Play Store
 - JSON Stucture
 - Pictures
 - Issues/Pain Points
@@ -25,7 +26,7 @@ If you have not created a keystore you will need to do that.
 
 To create a keystore
 
-_link to keytool_ -genkey -v -keystore _keystoreName_.keystore -alias _keystoreAlias_ -keyalg RSA -keysize 2048 -validity 10000
+_link-to-keytool_ -genkey -v -keystore _keystoreName_.keystore -alias _keystoreAlias_ -keyalg RSA -keysize 2048 -validity 10000
 
 You will be asked to create a password for your keystore.
 
@@ -33,9 +34,21 @@ You will be asked to create a password for your keystore.
 
 **Do not loose this keystore. Store it somewhere safe on your computer. This is how the Play Store recognises your app. Without this key, you cannot update your app. If you loose this, there is no way to retrieve this.**
 
-_link to jasrsigner_ -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore _customKeystoreName_  _link to unsigned apk_  _appname_
+_link-to-jasrsigner_ -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore _customKeystoreName_  _link to unsigned apk_  _appname_
 
-_zipalign_ -v 4 _Link-to-unsigned.apk_ _Signed-APK-Name.apk_
+_link-to-zipalign_ -v 4 _Link-to-unsigned.apk_ _Signed-APK-Name.apk_
+
+### Publishing Apps on the Play Store
+Visit [https://play.google.com/apps/publish/](https://play.google.com/apps/publish/ "Google Play Developer Console") 
+
+When creating a store listing there are certain things you need. 
+- Title
+- Short Description
+- Long Description 
+- Screen Shots
+- Icon 
+- Feature Image
+
 
 ### JSON Stucture
 Example: { "Tree_ID":1, "UTM_zone":"17S", "Easting":301313.12, "Northing":3909461.17, "Species_scientific":"Quercus alba", "Species_common":"White oak", "Spp_code":"QUAL", "Lat": 35.308635, "Long": -83.185412}
@@ -67,5 +80,7 @@ Full width that should have a css-width of 100% should be no less than 640px to 
 When creating and icon for the the app create it as a 512px X 512px PNG and place it in the resources folder with the name icon.png. Run _ionic resources --icon_ and it will generate the needed icons for both OS's. 
 When updating the app on the Play Store make sure you are updating the config.xml to a higher version number, or Google will not accept the APK. 
 The Jarsigner.exe and the keytool.exe are in the JDK. 
+The Zipaline.exe tool is located in the Android SDK
+
 
 Made Using http://prose.io
