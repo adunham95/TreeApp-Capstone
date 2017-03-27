@@ -18,29 +18,34 @@ To test the app on an Android Device you need to enable develop mode, and USB de
 
 ### Building 
 **Android Devices**
+
 To run the app on an Android device (either in production, or testing) you need to run _ionic platform add android_
+
 If you have not created a keystore you will need to do that. 
+
 To create a keystore
+
 _link to keytool_ -genkey -v -keystore _keystoreName_.keystore -alias _keystoreAlias_ -keyalg RSA -keysize 2048 -validity 10000
 
 You will be asked to create a password for your keystore.
 
 **Do not forget this password. You will need it to build the app. **
-**Do not loose this keystore. Store it somewhere safe on your computer. This is how the Play Store recognises your** **app. Without this key, you cannot update your app. If you loose this, there is no way to retrieve this.**
+
+**Do not loose this keystore. Store it somewhere safe on your computer. This is how the Play Store recognises your app. Without this key, you cannot update your app. If you loose this, there is no way to retrieve this.**
 
 _link to jasrsigner_ -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore _customKeystore_ _link to unsigned apk_ _appname_
 
 ### JSON Stucture
 Example: { "Tree_ID":1, "UTM_zone":"17S", "Easting":301313.12, "Northing":3909461.17, "Species_scientific":"Quercus alba", "Species_common":"White oak", "Spp_code":"QUAL", "Lat": 35.308635, "Long": -83.185412}
 
-Tree_ID: The numeric id for the tree
-UTM_zone:The numbers represents what zone east to west, and the number represents north or south
-Easting, Northing:The location that is used by ArcGIS to plot the points in ArcGIS
-Species_scientific: The name used by scietific community to identify a tree species
-Species_common: The common name to identify the tree
-Spp_code: The scientific short code to identify the tree 
-Lat: The latitude of the location
-Long: The longitude of the locations
+- Tree_ID: The numeric id for the tree
+- UTM_zone:The numbers represents what zone east to west, and the number represents north or south
+- Easting, Northing:The location that is used by ArcGIS to plot the points in ArcGIS
+- Species_scientific: The name used by scietific community to identify a tree species
+- Species_common: The common name to identify the tree
+- Spp_code: The scientific short code to identify the tree 
+- Lat: The latitude of the location
+- Long: The longitude of the locations
 
 ### Picutres
 
