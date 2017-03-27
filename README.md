@@ -1,5 +1,5 @@
 ## Tree App
-Wcu Tree App
+**WCU Tree App**
 - Set up
 - Testing
 - Building
