@@ -15,14 +15,8 @@
   <!--<div #map id="map" style="height:50%;"></div>-->
   <ion-grid padding>
     <ion-slides style="height: 25%">
-      <ion-slide>
-        <img src="assets/img/rgjddtoLQMXBIWMALxAh_8aff73d4a76acfa50339ba418bd12afa.jpg">
-      </ion-slide>
-      <ion-slide>
-        <img src="assets/img/rgjddtoLQMXBIWMALxAh_8aff73d4a76acfa50339ba418bd12afa.jpg">
-      </ion-slide>
-      <ion-slide>
-        <img src="assets/img/rgjddtoLQMXBIWMALxAh_8aff73d4a76acfa50339ba418bd12afa.jpg">
+      <ion-slide *ngFor="let pic of tree.Images">
+        <img [src] = "pic">
       </ion-slide>
     </ion-slides>
     <ion-row>
