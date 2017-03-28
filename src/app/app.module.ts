@@ -6,6 +6,7 @@ import {Page1, Page2, Home, Trees, Map, startPage} from '../pages';
 import {ReadMore, TreeItem, TreeModal, LocalStorage, MapComponent} from '../components';
 import {ApiService} from '../services';
 import { AgmCoreModule } from 'angular2-google-maps/core';
+import { Geolocation } from '@ionic-native/geolocation';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,6 @@ import { AgmCoreModule } from 'angular2-google-maps/core';
     startPage,
     MapComponent
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, ApiService, LocalStorage, Storage]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, ApiService, LocalStorage, Storage, Geolocation]
 })
 export class AppModule {}

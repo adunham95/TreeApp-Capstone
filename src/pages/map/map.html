@@ -15,6 +15,10 @@
 
 <ion-content>
   <sebm-google-map [latitude]="lat" [longitude]="lng" [zoom]=16>
+
+    <sebm-google-map-marker [latitude]="lat" [longitude]="lng">
+    </sebm-google-map-marker>
+
     <sebm-google-map-marker  *ngFor="let tree of forest; let i = index" [latitude]="tree.Lat" [longitude]="tree.Long" (click)="openModal(i)">
       <sebm-google-map-info-window [disableAutoPan]="true">
         <h6>{{tree.Species_common}}</h6>
