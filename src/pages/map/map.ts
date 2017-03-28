@@ -1,8 +1,8 @@
-import { Geolocation } from '@ionic-native/geolocation';
 import { Component, ViewChild, ElementRef } from '@angular/core';
 import {NavController, Platform, ModalController} from 'ionic-angular';
 import {Http} from "@angular/http";
 import {TreeModal} from '../../components/'
+import { Geolocation } from '@ionic-native/geolocation';
 
 declare var google;
 
@@ -24,28 +24,24 @@ export class Map {
       .subscribe(res => this.forest = res.json());
 
 
-    geolocation.getCurrentPosition().then((resp) => {
-      // resp.coords.latitude
-      // resp.coords.longitude
-    }).catch((error) => {
-      console.log('Error getting location', error);
-    });
-
-    let watch = geolocation.watchPosition();
-    watch.subscribe((data) => {
-      // data can be a set of coordinates, or an error (if an error occurred).
-      this.lat = data.coords.latitude;
-      this.lng = data.coords.longitude;
-    });
-
-
+    this.getLocation()
   }
 
-  openModal(characterNum) {
-
-    let modal = this.modalCtrl.create(TreeModal, {tree: this.forest[characterNum]});
-    // console.log(characterNum);
-    modal.present();
+  getLocation(){
+    // this.geolocation.getCurrentPosition().then((resp) => {
+    //   this.lat = resp.coords.latitude;
+    //   this.lng = resp.coords.longitude;
+    //   console.log(this.lat, this.lng)
+    // }).catch((error) => {
+    //   console.log('Error getting location', error);
+    // });
+    let watch = this.geolocation.watchPosition();
+    watch.subscribe((data) => {
+      // data can be a set of coordinates, or an error (if an error occurred).
+      this.lat = data.coords.latitude
+      this.lng = data.coords.longitude
+      console.log(data.coords)
+    });
   }
 
 }
