@@ -4,7 +4,7 @@
 - Testing
 - Building
 - Publishing Apps on the Play Store
-- JSON Stucture
+- JSON Structure
 - Pictures
 - Issues/Pain Points
 - Additional Issues
@@ -14,7 +14,7 @@ After downloading, run npm install through the command prompt
 Then you should be good to go
 
 ### Testing
-To view in the browser run ionic serve, and you will get a live local serve to devlop on. 
+To view in the browser run ionic serve, and you will get a live local serve to develop on. 
 To test the app on an Android Device you need to enable develop mode, and USB debugging on the Android Device. 
 
 ### Building 
@@ -50,19 +50,19 @@ When creating a store listing there are certain things you need.
 - Feature Image
 
 
-### JSON Stucture
+### JSON Structure
 Example: { "Tree_ID":1, "UTM_zone":"17S", "Easting":301313.12, "Northing":3909461.17, "Species_scientific":"Quercus alba", "Species_common":"White oak", "Spp_code":"QUAL", "Lat": 35.308635, "Long": -83.185412}
 
 - Tree_ID: The numeric id for the tree
 - UTM_zone:The numbers represents what zone east to west, and the number represents north or south
 - Easting, Northing:The location that is used by ArcGIS to plot the points in ArcGIS
-- Species_scientific: The name used by scietific community to identify a tree species
+- Species_scientific: The name used by scientific community to identify a tree species
 - Species_common: The common name to identify the tree
 - Spp_code: The scientific short code to identify the tree 
 - Lat: The latitude of the location
 - Long: The longitude of the locations
 
-### Picutres
+### Pictures
 
 **Play Store**
 The icon needs to be a 512px X 512px PNG
@@ -72,9 +72,9 @@ These images needs to be exact due to Play Store Guidelines
 **In App**
 Image for Welcome screen
 Image for Home Screen
-Image for generic tree, if no image is avalible
+Image for generic tree, if no image is available
 The best format for these images is PNG
-Full width that should have a css-width of 100% should be no less than 640px to keep the same resoultion. 
+Full width that should have a css-width of 100% should be no less than 640px to keep the same resolution. 
 
 ### Issues/Pain Points
 When creating and icon for the the app create it as a 512px X 512px PNG and place it in the resources folder with the name icon.png. Run _ionic resources --icon_ and it will generate the needed icons for both OS's. 
