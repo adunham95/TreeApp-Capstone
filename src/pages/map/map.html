@@ -14,9 +14,13 @@
 </ion-header>
 
 <ion-content>
-  <sebm-google-map [latitude]="lat" [longitude]="lng" [zoom]=16>
+  <sebm-google-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
 
-    <sebm-google-map-marker [latitude]="lat" [longitude]="lng">
+    <!--<sebm-google-map-circle [latitude]="lat" [longitude]="lng" [radius] = "radius" [strokeColor] = "blue">-->
+
+    <!--</sebm-google-map-circle>-->
+
+    <sebm-google-map-marker [latitude]="lat" [longitude]="lng" iconUrl = "assets/img/currentLocationSmall.png">
     </sebm-google-map-marker>
 
     <sebm-google-map-marker  *ngFor="let tree of forest; let i = index" [latitude]="tree.Lat" [longitude]="tree.Long" (click)="openModal(i)">

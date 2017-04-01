@@ -15,6 +15,8 @@ export class Map {
 
   lat: number = 35.3089;
   lng: number = -83.1844;
+  zoom: number = 16;
+  radius: number = 100;
   forest;
   @ViewChild('map') mapElement: ElementRef;
       map: any;
@@ -24,7 +26,12 @@ export class Map {
       .subscribe(res => this.forest = res.json());
 
 
-    this.getLocation()
+    this.getLocation();
+    this.setRadius()
+  }
+
+  setRadius() {
+
   }
 
   getLocation(){
@@ -38,8 +45,9 @@ export class Map {
     let watch = this.geolocation.watchPosition();
     watch.subscribe((data) => {
       // data can be a set of coordinates, or an error (if an error occurred).
-      this.lat = data.coords.latitude
-      this.lng = data.coords.longitude
+      this.lat = data.coords.latitude;
+      this.lng = data.coords.longitude;
+      console.log(this.zoom);
       console.log(data.coords)
     });
   }
