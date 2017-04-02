@@ -2,7 +2,7 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import {Storage} from '@ionic/storage';
 import { MyApp } from './app.component';
-import {Page1, Page2, Home, Trees, Map, startPage} from '../pages';
+import {Home, Trees, Map, startPage} from '../pages';
 import {ReadMore, TreeItem, TreeModal, LocalStorage, MapComponent} from '../components';
 import {ApiService} from '../services';
 import { AgmCoreModule } from 'angular2-google-maps/core';
@@ -11,8 +11,6 @@ import { Geolocation } from '@ionic-native/geolocation';
 @NgModule({
   declarations: [
     MyApp,
-    Page1,
-    Page2,
     Home,
     ReadMore,
     Trees,
@@ -31,8 +29,6 @@ import { Geolocation } from '@ionic-native/geolocation';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    Page1,
-    Page2,
     Home,
     ReadMore,
     Trees,

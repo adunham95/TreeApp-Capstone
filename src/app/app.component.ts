@@ -2,7 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
 
-import {Page1, Page2, Home, Trees, Map, startPage} from '../pages';
+import {Home, Trees, Map, startPage} from '../pages';
 
 
 @Component({
