@@ -1,8 +1,6 @@
-import {Component, ElementRef, ViewChild, Input} from '@angular/core';
-import {ModalController, Platform, NavParams, ViewController, NavController} from 'ionic-angular';
-import { GoogleMap, GoogleMapsEvent, GoogleMapsLatLng, CameraPosition, GoogleMapsMarkerOptions, GoogleMapsMarker} from 'ionic-native';
+import {Component, ElementRef, ViewChild} from '@angular/core';
+import {Platform, NavController} from 'ionic-angular';
 
-import { TreeModal } from './../tree-modal'
 
 declare var google;
 
@@ -11,8 +9,6 @@ declare var google;
   templateUrl: 'map-component.html'
 })
 export class MapComponent {
-
-  // @Input() tree: TreeModal;
 
   lat = 35.302881;
   long = -83.182504;

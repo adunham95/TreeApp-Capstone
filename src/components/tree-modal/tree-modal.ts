@@ -1,7 +1,6 @@
 import {Component, ElementRef, ViewChild} from '@angular/core';
-import {ModalController, Platform, NavParams, ViewController, NavController} from 'ionic-angular';
+import {Platform, NavParams, ViewController} from 'ionic-angular';
 import {Http} from "@angular/http";
-import { GoogleMap, GoogleMapsEvent, GoogleMapsLatLng, CameraPosition, GoogleMapsMarkerOptions, GoogleMapsMarker } from 'ionic-native';
 
 declare var google;
 
