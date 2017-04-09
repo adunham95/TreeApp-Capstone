@@ -42,7 +42,7 @@ You will be asked to create a password for your keystore.
 
 _link-to-jasrsigner_ `-verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore` _customKeystoreName_  _link to unsigned apk_  _appname_
 
-link-to-zipalign_ `-v 4` _Link-to-unsigned.apk_ _Signed-APK-Name.apk
+_link-to-zipalign_ `-v 4` _Link-to-unsigned.apk_ _Signed-APK-Name.apk_
 
 ### Ionic View 
 
