@@ -45,6 +45,25 @@ _link-to-jasrsigner_ `-verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore` _c
 _link-to-zipalign_ `-v 4` _Link-to-unsigned.apk_ _Signed-APK-Name.apk_
 
 ### Ionic View 
+To upload the app to Ionic View use `ionic upload`
+
+To share the app with someone use `ionic share` _email address_
+
+The Ionic View Login Information is: 
+
+Email: `wcudesign@gmail.com`
+
+Password: `WCUDesign2017`
+
+The Login Information for this email account is:
+
+Email: `wcudesign@gmail.com`
+
+Password: `WCUDesign2017`
+
+This is a non person email account created specifically to view the app
+on a mobile device. This will help show off the app on multiple devices
+without installing the app. 
 
 ### Publishing Apps on the Play Store
 Visit [https://play.google.com/apps/publish/](https://play.google.com/apps/publish/ "Google Play Developer Console") 

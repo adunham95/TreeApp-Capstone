@@ -16,7 +16,7 @@ export class Trees implements AfterViewChecked{
 
   constructor(public navCtrl: NavController, public treeService: ApiService, public modalCtrl: ModalController, private http:Http, public loadingCtrl: LoadingController) {
 
-      http.get('http://adriandunham.com/treesFULL.json')
+      http.get('../assets/treesFULL.json')
           .subscribe(res => this.forest = res.json());
 
   }

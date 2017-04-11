@@ -21,7 +21,7 @@ export class Map {
       map: any;
 
   constructor(public navCtrl: NavController, public platform: Platform, private http:Http,public modalCtrl: ModalController, private geolocation: Geolocation) {
-    http.get('http://adriandunham.com/treesFULL.json')
+    http.get('../assets/treesFULL.json')
       .subscribe(res => this.forest = res.json());
 
 

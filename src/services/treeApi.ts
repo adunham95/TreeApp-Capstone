@@ -13,11 +13,11 @@ export class ApiService{
 
     forest;
 
-    api_url: string = 'http://adriandunham.com/trees.json';
+    api_url: string = '../assets/treesFULL.json';
 
     constructor(private http: Http){
 
-        this.http.get('http://adriandunham.com/trees.json')
+        this.http.get('../assets/treesFULL.json')
             .subscribe(res => this.forest = res.json());
 
     }
