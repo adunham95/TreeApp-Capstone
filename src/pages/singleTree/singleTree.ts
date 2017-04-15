@@ -1,17 +1,21 @@
 import { Component } from '@angular/core';
 
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 
 @Component({
   selector: 'singleTree',
-  templateUrl: 'src/pages/singleTree/singleTree.html'
+  templateUrl: 'singleTree.html'
 })
 export class singleTree {
 
-  constructor(public navCtrl: NavController) {
+  tree;
 
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.tree = this.navParams.get('tree');
+    console.log(this.tree)
   }
 
-  description = " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute iruredolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-
+  dismiss(){
+    this.navCtrl.pop()
+  }
 }

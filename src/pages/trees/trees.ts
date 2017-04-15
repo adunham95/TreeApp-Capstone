@@ -33,9 +33,11 @@ export class Trees implements AfterViewChecked{
 
   openSingleTree(characterNum) {
 
-    // console.log(characterNum);
-    this.nav.setRoot(singleTree);
-    }
+    console.log(this.forest[characterNum]);
+    this.navCtrl.push(singleTree, {
+      tree: this.forest[characterNum]
+    });
+  }
 
   presentLoading() {
     let loader = this.loadingCtrl.create({
