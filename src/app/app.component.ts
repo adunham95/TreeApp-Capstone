@@ -2,7 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
 
-import {Home, Trees, Map, startPage} from '../pages';
+import {Home, Trees, Map, startPage, singleTree} from '../pages';
 
 
 @Component({
@@ -24,6 +24,7 @@ export class MyApp {
       { title: 'Trees', component: Trees },
       { title: 'Map', component: Map },
       { title: 'Start Page', component: startPage },
+      { title: 'Single Tree', component: singleTree },
 
     ];
 

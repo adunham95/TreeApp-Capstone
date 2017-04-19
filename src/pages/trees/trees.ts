@@ -1,7 +1,7 @@
-import {Component, PipeTransform, Injectable, Pipe, AfterViewChecked} from '@angular/core';
-import {NavController, ModalController, LoadingController} from 'ionic-angular';
+import {Component, PipeTransform, Injectable, Pipe, AfterViewChecked, ViewChild} from '@angular/core';
+import {Nav, NavController, ModalController, LoadingController} from 'ionic-angular';
 import {ApiService} from '../../services';
-import {TreeModal} from '../../components/'
+import {singleTree} from '../singleTree/singleTree';
 import {Http} from "@angular/http";
 
 
@@ -11,6 +11,8 @@ import {Http} from "@angular/http";
     providers:[ApiService]
 })
 export class Trees implements AfterViewChecked{
+
+  @ViewChild(Nav) nav: Nav;
 
     forest;
 
@@ -29,12 +31,13 @@ export class Trees implements AfterViewChecked{
     console.log("In setTreeArray");
   }
 
-  openModal(characterNum) {
+  openSingleTree(characterNum) {
 
-        let modal = this.modalCtrl.create(TreeModal, {tree: this.forest[characterNum]});
-        // console.log(characterNum);
-        modal.present();
-    }
+    console.log(this.forest[characterNum]);
+    this.navCtrl.push(singleTree, {
+      tree: this.forest[characterNum]
+    });
+  }
 
   presentLoading() {
     let loader = this.loadingCtrl.create({
