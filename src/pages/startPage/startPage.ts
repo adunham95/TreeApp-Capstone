@@ -25,15 +25,8 @@ export class startPage {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
-      this.firstTimeRun()
+
     });
-    console.log(this.firstRun);
-    if(this.firstRun == true){
-      alert("YOU ALREADY RAN THIS")
-    }
-
-    // this.storage.set('this', 'that')
-
   }
 
   @ViewChild(Slides) slides: Slides;
@@ -45,14 +38,6 @@ export class startPage {
 
   goHome(){
     this.navCtrl.setRoot(Home);
-  }
-
-  firstTimeRun(){
-
-    console.log(this.firstRun);
-    if(this.firstRun == true){
-      alert("YOU ALREADY RAN THIS AGAIN")
-    }
   }
 
 }

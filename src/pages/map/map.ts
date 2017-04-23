@@ -1,6 +1,4 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
-import {NavController, Platform, ModalController} from 'ionic-angular';
-import {Http} from "@angular/http";
 import {ApiService} from '../../services';
 import { Geolocation } from '@ionic-native/geolocation';
 
@@ -22,8 +20,7 @@ export class Map {
       map: any;
 
   constructor(private geolocation: Geolocation, public treeService: ApiService,) {
-    // http.get('../assets/treesFULL.json')
-    //   .subscribe(res => this.forest = res.json());
+
 
 
     this.getLocation();

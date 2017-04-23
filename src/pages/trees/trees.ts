@@ -1,4 +1,4 @@
-import {Component, PipeTransform, Injectable, Pipe, AfterViewChecked, ViewChild} from '@angular/core';
+import {Component, AfterViewChecked, ViewChild} from '@angular/core';
 import {Nav, NavController, LoadingController} from 'ionic-angular';
 import {ApiService} from '../../services';
 import {singleTree} from '../singleTree/singleTree';
@@ -51,13 +51,3 @@ export class Trees implements AfterViewChecked{
 
 }
 
-@Pipe({
-    name: 'filter'
-})
-@Injectable()
-export class FilterPipe implements PipeTransform {
-    transform(items: any[], field : string, value : string): any[] {
-        if (!items) return [];
-        return items.filter(it => it[field] == value);
-    }
-}
