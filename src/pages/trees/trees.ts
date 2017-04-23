@@ -1,9 +1,7 @@
 import {Component, PipeTransform, Injectable, Pipe, AfterViewChecked, ViewChild} from '@angular/core';
-import {Nav, NavController, ModalController, LoadingController} from 'ionic-angular';
+import {Nav, NavController, LoadingController} from 'ionic-angular';
 import {ApiService} from '../../services';
 import {singleTree} from '../singleTree/singleTree';
-import {Http} from "@angular/http";
-
 
 @Component({
   selector: 'trees',
@@ -16,15 +14,19 @@ export class Trees implements AfterViewChecked{
 
     forest;
 
-  constructor(public navCtrl: NavController, public treeService: ApiService, public modalCtrl: ModalController, private http:Http, public loadingCtrl: LoadingController) {
+  constructor(public navCtrl: NavController, public treeService: ApiService, public loadingCtrl: LoadingController) {
 
-      http.get('../assets/treesFULL.json')
-          .subscribe(res => this.forest = res.json());
 
   }
 
   ngAfterViewChecked(){
 
+  }
+
+
+  ngOnInit(){
+    this.treeService.getForest().subscribe(data => this.forest = data);
+    console.log(this.forest)
   }
 
   setTreeArray(){

@@ -1,1 +1,1 @@
-export {ApiService} from './treeApi';
+export {ApiService} from './treeApi.service';

@@ -1,6 +1,7 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
 import {NavController, Platform, ModalController} from 'ionic-angular';
 import {Http} from "@angular/http";
+import {ApiService} from '../../services';
 import { Geolocation } from '@ionic-native/geolocation';
 
 declare var google;
@@ -20,17 +21,18 @@ export class Map {
   @ViewChild('map') mapElement: ElementRef;
       map: any;
 
-  constructor(public navCtrl: NavController, public platform: Platform, private http:Http,public modalCtrl: ModalController, private geolocation: Geolocation) {
-    http.get('../assets/treesFULL.json')
-      .subscribe(res => this.forest = res.json());
+  constructor(private geolocation: Geolocation, public treeService: ApiService,) {
+    // http.get('../assets/treesFULL.json')
+    //   .subscribe(res => this.forest = res.json());
 
 
     this.getLocation();
-    this.setRadius()
+    this.getForest();
   }
 
-  setRadius() {
-
+  getForest(){
+    this.treeService.getForest().subscribe(data => this.forest = data);
+    console.log(this.forest)
   }
 
   getLocation(){

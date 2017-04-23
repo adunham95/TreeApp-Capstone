@@ -4,7 +4,6 @@ import {Http} from '@angular/http';
 import {NavController, NavParams, Slides, Nav, Platform} from 'ionic-angular';
 import {Home} from "../index";
 
-import {LocalStorage} from "../../components/localstorage";
 
 @Component({
   selector: 'start-page',
@@ -21,7 +20,6 @@ export class startPage {
     public navCtrl: NavController,
     public navParams: NavParams,
     public http: Http,
-    private localStorage: LocalStorage
   )
   {
     platform.ready().then(() => {
@@ -47,11 +45,9 @@ export class startPage {
 
   goHome(){
     this.navCtrl.setRoot(Home);
-    this.localStorage.firstTimeRun();
   }
 
   firstTimeRun(){
-    this.firstRun = this.localStorage.didRun()
 
     console.log(this.firstRun);
     if(this.firstRun == true){

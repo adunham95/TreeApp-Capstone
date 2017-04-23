@@ -111,7 +111,7 @@ Add the icon to the resources folder
  Run `ionic resources --icon`
 
 ### Issues and Pain Points
-- When creating and icon for the the app create it as a 512px X 512px PNG and place it in the resources folder with the name icon.png. Run _ionic resources --icon_ and it will generate the needed icons for both OS's. 
+- When creating and icon for the app create it as a 512px X 512px PNG and place it in the resources folder with the name icon.png. Run _ionic resources --icon_ and it will generate the needed icons for both OS's. 
 - When updating the app on the Play Store make sure you are updating the config.xml to a higher version number, or Google will not accept the APK. 
 - The Jarsigner.exe and the keytool.exe are in the JDK. 
 - The Zipaline.exe tool is located in the Android SDK

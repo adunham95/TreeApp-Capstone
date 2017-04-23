@@ -3,7 +3,7 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import {Storage} from '@ionic/storage';
 import { MyApp } from './app.component';
 import {Home, Trees, Map, startPage, singleTree} from '../pages';
-import {ReadMore, TreeItem, TreeModal, LocalStorage, MapComponent} from '../components';
+import {ReadMore} from '../components'
 import {ApiService} from '../services';
 import { AgmCoreModule } from 'angular2-google-maps/core';
 import { Geolocation } from '@ionic-native/geolocation';
@@ -12,14 +12,11 @@ import { Geolocation } from '@ionic-native/geolocation';
   declarations: [
     MyApp,
     Home,
-    ReadMore,
     Trees,
-    TreeItem,
     Map,
-    TreeModal,
     startPage,
-    MapComponent,
-    singleTree
+    singleTree,
+    ReadMore
   ],
   imports: [
     IonicModule.forRoot(MyApp),
@@ -31,15 +28,12 @@ import { Geolocation } from '@ionic-native/geolocation';
   entryComponents: [
     MyApp,
     Home,
-    ReadMore,
     Trees,
-    TreeItem,
     Map,
-    TreeModal,
     startPage,
-    MapComponent,
-    singleTree
+    singleTree,
+    ReadMore
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, ApiService, LocalStorage, Storage, Geolocation]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, ApiService, Storage, Geolocation]
 })
 export class AppModule {}

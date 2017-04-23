@@ -8,6 +8,8 @@ import { NavController } from 'ionic-angular';
 })
 export class Home {
 
+  isCollapsed: boolean = true;
+
   constructor(public navCtrl: NavController) {
 
   }
